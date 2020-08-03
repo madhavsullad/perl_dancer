@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  dancer_perl:
+    image: perl_dancer
+    ports:
+      - "8080:3000"
+    volumes:
+      - .:/usr/src/app
+    entrypoint: [perl, main.pl]
